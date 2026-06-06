@@ -1,11 +1,11 @@
 import argparse
 
 from langchain_community.vectorstores import Chroma
+from langchain_core.prompts import ChatPromptTemplate
 from langchain_google_genai import (
     GoogleGenerativeAIEmbeddings,
     ChatGoogleGenerativeAI
 )
-from langchain.prompts import ChatPromptTemplate
 
 CHROMA_PATH = "chroma"
 
@@ -36,7 +36,7 @@ def main():
 
     # Gemini Embeddings
     embedding_function = GoogleGenerativeAIEmbeddings(
-        model="models/embedding-001"
+        model="gemini-embedding-001"
     )
 
     db = Chroma(

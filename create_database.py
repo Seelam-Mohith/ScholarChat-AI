@@ -1,8 +1,8 @@
 from langchain_community.document_loaders import PyPDFDirectoryLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.schema import Document
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import Chroma
+from langchain_core.documents import Document
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from dotenv import load_dotenv
 import os
@@ -52,7 +52,7 @@ def save_to_chroma(chunks: list[Document]):
         shutil.rmtree(CHROMA_PATH)
 
     embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/embedding-001"
+        model="gemini-embedding-001"
     )
 
     db = Chroma.from_documents(
