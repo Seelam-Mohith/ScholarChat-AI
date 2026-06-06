@@ -1,0 +1,10 @@
+langchain
+langchain-community
+langchain-google-genai
+chromadb
+openai
+python-dotenv
+unstructured
+markdown
+tiktoken
+numpy==1.26.4
