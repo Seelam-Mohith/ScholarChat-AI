@@ -18,7 +18,7 @@ load_dotenv()
 
 st.set_page_config(page_title="PaperPilot AI")
 
-st.title("PaperPilot AI")
+st.title("ScholarChat AI")
 st.write("Upload a syllabus PDF and ask questions.")
 
 if "vector_store" not in st.session_state:
