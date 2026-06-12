@@ -17,7 +17,7 @@ from langchain_google_genai import (
 
 load_dotenv()
 
-st.set_page_config(page_title="PaperPilot AI")
+st.set_page_config(page_title="ScholarChat AI", page_icon="🎓")
 
 st.title("ScholarChat AI")
 st.write("Upload a syllabus PDF and ask questions.")
