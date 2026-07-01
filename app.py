@@ -93,7 +93,7 @@ if uploaded_file:
             recognition.maxAlternatives = 1;
 
             document.getElementById("micBtn").innerText = "Listening...";
-            document.getElementById("status").innerText = "🔴 Speak now...";
+            document.getElementById("status").innerText = "Speak now...";
 
             recognition.onresult = (event) => {
                 const transcript = event.results[0][0].transcript;
