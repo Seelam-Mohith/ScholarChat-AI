@@ -120,8 +120,8 @@ if uploaded_file:
             };
 
             recognition.onend = () => {
-                if (document.getElementById("micBtn").innerText === "⏳ Listening...") {
-                    document.getElementById("micBtn").innerText = "🎤 Speak Question";
+                if (document.getElementById("micBtn").innerText === "Listening...") {
+                    document.getElementById("micBtn").innerText = "Speak Question";
                 }
             };
 
