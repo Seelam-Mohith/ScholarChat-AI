@@ -83,7 +83,7 @@ if uploaded_file:
         function startListening() {
             const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
             if (!SpeechRecognition) {
-                document.getElementById("status").innerText = "❌ Not supported. Use Chrome or Edge.";
+                document.getElementById("status").innerText = "Not supported. Use Chrome or Edge.";
                 return;
             }
 
@@ -107,7 +107,15 @@ if uploaded_file:
             };
 
             recognition.onerror = (e) => {
-                document.getElementById("status").innerText = "❌ Error: " + e.error;
+                let msg = "❌ Error: " + e.error;
+                if (e.error === "network") {
+                    msg += " — Check your internet connection. Firewalls/VPNs may block speech recognition.";
+                } else if (e.error === "not-allowed") {
+                    msg += " — Please allow microphone access in your browser.";
+                } else if (e.error === "no-speech") {
+                    msg += " — No speech detected. Try speaking louder or closer to the mic.";
+                }
+                document.getElementById("status").innerText = msg;
                 document.getElementById("micBtn").innerText = "🎤 Speak Question";
             };
 
