@@ -92,7 +92,7 @@ if uploaded_file:
             recognition.interimResults = false;
             recognition.maxAlternatives = 1;
 
-            document.getElementById("micBtn").innerText = "⏳ Listening...";
+            document.getElementById("micBtn").innerText = "Listening...";
             document.getElementById("status").innerText = "🔴 Speak now...";
 
             recognition.onresult = (event) => {
