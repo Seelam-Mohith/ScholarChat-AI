@@ -116,7 +116,7 @@ if uploaded_file:
                     msg += " — No speech detected. Try speaking louder or closer to the mic.";
                 }
                 document.getElementById("status").innerText = msg;
-                document.getElementById("micBtn").innerText = "🎤 Speak Question";
+                document.getElementById("micBtn").innerText = "Speak Question";
             };
 
             recognition.onend = () => {
