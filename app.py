@@ -107,7 +107,7 @@ if uploaded_file:
             };
 
             recognition.onerror = (e) => {
-                let msg = "❌ Error: " + e.error;
+                let msg = "Error: " + e.error;
                 if (e.error === "network") {
                     msg += " — Check your internet connection. Firewalls/VPNs may block speech recognition.";
                 } else if (e.error === "not-allowed") {
