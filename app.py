@@ -98,7 +98,7 @@ if uploaded_file:
             recognition.onresult = (event) => {
                 const transcript = event.results[0][0].transcript;
                 document.getElementById("status").innerText = "Heard: " + transcript;
-                document.getElementById("micBtn").innerText = "🎤 Speak Question";
+                document.getElementById("micBtn").innerText = "Speak Question";
 
                 // Pass transcript back to Streamlit via URL
                 const url = new URL(window.parent.location.href);
