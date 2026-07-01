@@ -72,7 +72,7 @@ if uploaded_file:
             <button onclick="startListening()" id="micBtn"
                 style="padding:9px 18px; border-radius:8px; background:#e74c3c;
                        color:white; border:none; cursor:pointer; font-size:15px;">
-                🎤 Speak Question
+                 Speak Question
             </button>
             <span id="status" style="color:gray; font-size:13px;">
                 Click mic and speak (Chrome/Edge only)
