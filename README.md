@@ -154,4 +154,5 @@ Open the application in your browser, upload a syllabus PDF, and begin asking qu
 **Seelam Mohith**
 
 GitHub: https://github.com/Seelam-Mohith
+
 For Issues: https://github.com/Seelam-Mohith/ScholarChat-AI/issues
