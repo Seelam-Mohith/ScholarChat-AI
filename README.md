@@ -140,6 +140,20 @@ streamlit run app.py
 
 Open the application in your browser, upload a syllabus PDF, and begin asking questions.
 
+## Deployment on Streamlit Community Cloud
+
+1. Push this repository to GitHub (e.g. `https://github.com/Seelam-Mohith/ScholarChatAI`).
+2. Go to [share.streamlit.io](https://share.streamlit.io) → **Create app** → select the repo, branch, and `app.py` as the main file.
+3. In the app's **Settings → Secrets**, add the API key:
+
+   ```toml
+   GOOGLE_API_KEY="your_google_api_key"
+   ```
+
+4. Click **Deploy**. The app reads the key from Streamlit Secrets (no `.env` needed on the cloud).
+
+> Local secrets template: `.streamlit/secrets.toml.example` (copy to `.streamlit/secrets.toml`). Never commit the real key.
+
 ## Future Enhancements
 
 * Multi-document support
